@@ -4,12 +4,9 @@ export default async function handler(req, res) {
   const { latitude, longitude } = req.query;
 
   try {
-    const url = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1';
-    const apiKey = '5e7653c1a566d6d9';
-
-    const response = await axios.get(`${url}/restaurants`, {
+    const response = await axios.get('/api/hotpepper', {
       params: {
-        key: apiKey,
+        key: '5e7653c1a566d6d9',
         lat: latitude,
         lng: longitude,
         range: 1,
