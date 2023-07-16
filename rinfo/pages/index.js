@@ -122,51 +122,51 @@ return (
     <Head>
       <title>東京グルメ店検索</title>
     </Head>
-    <div className="max-w-3xl font-mono bg-gray-100 mx-auto">
+    <div class="Search">
       <div>
-        <div className="text-2xl py-6 text-center">
-          <h2 className="font-medium tracking-wider ">東京グルメ店検索</h2>
+        <div class="STitle">
+          <h2 class="Title">東京グルメ店検索</h2>
         </div>
-        <div className="">
-          <form onSubmit={handlerOnSubmitSearch} className="text-center">
+        <div class="SBox">
+          <form onSubmit={handlerOnSubmitSearch} class="">
             <input
               type="search"
               name="query"
-              className="rounded py-2 px-4 text-left border-red-500"
+              class=""
               placeholder="キーワードを入力して下さい"
             />
-            <button className="ml-2 text-white bg-red-500 rounded py-2 px-6 hover:opacity-75">
-              Search
+            <button class="">
+              検索
             </button>
           </form>
-          <div className="text-sm pt-2 text-gray-600 text-center">
+          <div class="SRNum">
             <span>{page.results_available}</span> <span>件</span>
           </div>
         </div>
       </div>
 
-      <div className="max-w-3xl font-mono bg-gray-100 mx-auto">
-        <ul className="mx-4">
+      <div class="SRes">
+        <ul class="RList">
           {data.results.shop.map((item, index) => (
             <li
               key={index}
-              className="my-4 bg-white rounded border-red-500 border-2"
+              class=""
             >
               <Link href={item.urls.pc}>
-                <div className="grid grid-cols-10">
-                  <div className="col-span-2 self-center">
+                <div class="">
+                  <div class="">
                     <div>
                       <img src={item.photo.mobile.s} alt={item.name} />
                     </div>
                   </div>
-                  <div className="ml-3 col-span-8">
-                    <div className="text-lg mt-2 mr-2">{item.name}</div>
-                    <div className="text-xs mt-2 mr-2 pb-2">
-                      <div className="text-xs">
-                        <span className="font-medium">{item.genre.name}</span>
-                        <span className="ml-4">{item.catch}</span>
+                  <div class="">
+                    <div class="">{item.name}</div>
+                    <div class="">
+                      <div class="">
+                        <span class="">{item.genre.name}</span>
+                        <span class="">{item.catch}</span>
                       </div>
-                      <p className="mt-1">{item.access}</p>
+                      <p class="">{item.access}</p>
                     </div>
                   </div>
                 </div>
@@ -177,9 +177,9 @@ return (
         {page.results_returned <= page.results_start ? (
           <div></div>
         ) : (
-          <div className="text-center pt-4 pb-8">
+          <div class="">
             <button
-              className="bg-red-500 rounded text-white tracking-wider font-medium hover:opacity-75 py-2 px-6 "
+              class=""
               onClick={handlerOnClickReadMore}
             >
               もっと読む
