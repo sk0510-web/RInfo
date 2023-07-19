@@ -4,10 +4,15 @@ const defaultEndpoint = 'https://webservice.recruit.co.jp/hotpepper/gourmet/v1/'
 const API_KEY = '5e7653c1a566d6d9';
 
 const handler = async (req, res) => {
-  let url = `${defaultEndpoint}?key=${API_KEY}&format=json&large_area=Z011`;
+  let url = `${defaultEndpoint}?key=${API_KEY}&format=json`;
 
-  if (typeof req.query.start !== undefined) {
+  if (typeof req.query.start !== 'undefined') {
     url = `${url}&start=${req.query.start}`;
+  }
+
+  if (typeof req.query.keyword !== 'undefined') {
+    const keyword = encodeURIComponent(req.query.keyword);
+    url = `${url}&keyword=${keyword}`;
   }
 
   try {

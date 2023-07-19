@@ -176,8 +176,8 @@ Link {
 
 .SRes {
   position: fixed;
-  bottom: 0;
   left: 0;
+  bottom: 30%;
   width: 100%;
   height: calc(33.33vh);
   background-color: rgba(0, 0, 0, 0.8);
@@ -185,8 +185,4 @@ Link {
   z-index: 2;
   transition: transform 0.3s;
   transform: translateY(100%);
-}
-
-.SRes:hover {
-  transform: translateY(0);
 }
