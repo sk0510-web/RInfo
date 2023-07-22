@@ -2,7 +2,6 @@
 
 *{
   margin: 0;
-  overflow-y: hidden;
 }
 
 :root {
@@ -26,6 +25,7 @@ header {
   width: 100%;
 }
 body {
+  overflow-y: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -44,11 +44,32 @@ h2 {
 }
 
 form{
+  width: 50%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 5em;
+  height: 45px;
   border-radius:0 0 5px 5px;
   border:1px solid #ccc;
   border-top: none;
   background: #fff;
-  
+}
+
+option {
+  width: 50%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 5em;
+  height: 45px;
+  border-radius:0 0 5px 5px;
+  border:1px solid #ccc;
+  border-top: none;
+  background: #fff;
+}
+
+.SRange {
+  margin-left: 5em;
+  width: 100%;
 }
 
 .Search {
@@ -110,79 +131,63 @@ form{
 .Search .SRNum {
   color:#767d83;
 }
+
+.SBox {
+  display: flex;
+}
 /*-----------------------------------*/
 /*map*/
 .map {
-  position: fixed;
-  top: 12%;
-  left: 0;
-  width: 100%;
+  overflow-y: hidden;
+  width: 50%;
   height: 100vh;
-  z-index: 0;
+  float: left;
 }
-
 
 /*-----------------------------------*/
-ul.RList{
-  position: float;
-  z-index: 2;
-  padding: 0;
-  font: 14px/1.6 'arial narrow', sans-serif;
-  width:100%;
-  list-style: none;
-}
-ul.RList li{
-  position: relative;
-  padding: 7px 5px 7px 35px;
-  margin-bottom:5px;
-  background: #5c9ee7;
-  color: #fff;
-}
-ul.RList li:before{
-  content: "";
-  position: absolute;
-  left: 10px;
-  display: block;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  background: #fff;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
 Link {
   text-decoration: none;
 }
 .carousel {
   width: 100%;
-  overflow: hidden;
 }
 
 .RList__viewport {
-  display: flex;
-  flex-wrap: nowrap;
-  transition: transform 0.5s;
-}
-
-.RList__slide1 {
-  flex: 0 0 100%;
-  padding: 0 10px;
-  transition: transform 0.5s;
+ height: 90%;
+ overflow-y: scroll;
 }
 
 .SRes {
-  position: fixed;
-  left: 0;
-  bottom: 30%;
-  width: 100%;
-  height: calc(33.33vh);
+  position: relative;
+  top: 7em;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  float: right;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
-  z-index: 2;
-  transition: transform 0.3s;
-  transform: translateY(100%);
+  font-family: "Noto Sans JP";
+}
+
+.RBox {
+  margin: 2px;
+  display: flex;
+  border: 1px solid #ccc; /* Add a 1px solid border with color #ccc */
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.RBox:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.RBox1 {
+  width: 100px;
+}
+
+.RBox2 {
+  padding-left: 2em;
+  width: 80%;
 }
