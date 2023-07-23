@@ -42,6 +42,16 @@ a {
 h2 {
   font-family: 'Noto Sans JP', sans-serif;
 }
+.credit {
+  position: absolute;
+  display: flex-box;
+  text-align: right;
+  top: 0.1em;
+  margin-left: calc(100% - 10vw);
+  font-size: 2px;
+  float: inline-end;
+
+}
 
 form{
   width: 50%;
@@ -145,33 +155,39 @@ option {
 }
 
 /*-----------------------------------*/
+
 Link {
   text-decoration: none;
 }
 .carousel {
   width: 100%;
+  margin-top: 1.1em;
+}
+
+.carousel h2 {
+  font-size: 20px;
 }
 
 .RList__viewport {
- height: 90%;
- overflow-y: scroll;
+ height: 65%;
 }
 
 .SRes {
   position: relative;
-  top: 7em;
+  top: 6em;
   width: 50%;
-  height: 100%;
+  height: 80%;
   box-sizing: border-box;
   padding: 20px;
   float: right;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   font-family: "Noto Sans JP";
+  overflow-y: scroll;
 }
 
 .RBox {
-  margin: 2px;
+  margin: 4px;
   display: flex;
   border: 1px solid #ccc; /* Add a 1px solid border with color #ccc */
   border-radius: 5px;
@@ -190,4 +206,16 @@ Link {
 .RBox2 {
   padding-left: 2em;
   width: 80%;
+}
+
+.RBox2 h3 {
+  padding-bottom: 8px;
+}
+
+.RBox2 .detail{
+  font-size: 14px;
+}
+
+.RBox2 p{
+  font-size: 14px;
 }
