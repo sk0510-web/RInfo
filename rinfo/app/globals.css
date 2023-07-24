@@ -183,7 +183,6 @@ Link {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   font-family: "Noto Sans JP";
-  overflow-y: scroll;
 }
 
 .RBox {
@@ -218,4 +217,16 @@ Link {
 
 .RBox2 p{
   font-size: 14px;
+}
+
+.Modal {
+  width: 100%;
+}
+
+.Modal img{
+  border: 2px solid #ccc;
+}
+select{
+  width: 160%;
+  height: 150%;
 }
