@@ -206,7 +206,7 @@ export default function Home({ data }) {
   
     const fetchData = async () => {
       try {
-        if (latitude && longitude) {
+        if (latitude && longitude) { // latitudeとlongitudeが定義されていることを確認する
           const response = await axios.get(`/api/hotpepper?lat=${latitude}&lng=${longitude}&range=${searchRadius}`);
           const data = response.data;
           const shopData = data.results.shop;
@@ -267,7 +267,7 @@ export default function Home({ data }) {
               <form action="" method="post" id="form" name = "local" className = "form">
                         
               <select name="range" id="date" value={searchRadius} onChange={handleRadiusChange}>
-                      <option value="" disabled>検索範囲(m)</option>
+                      <option value="" disabled></option>
                             
                             <option value={5}>500m</option>
                             <option value={10}>1000m</option>
