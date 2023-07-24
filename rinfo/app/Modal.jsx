@@ -45,8 +45,6 @@ const modalStyles = {
 };
 
 const Modal = ({ modalOpen, handleModalClose, modalData }) => {
-    // modalDataがnullの場合は何も表示しない
-console.log(modalData);
     
     if (!modalData) {
       return null;
@@ -57,7 +55,7 @@ console.log(modalData);
     return (
       <>
         {modalOpen && (
-          <div crassName="Modal" style={modalContentStyles} onClick={handleModalClose}>
+          <div className="Modal" style={modalContentStyles} onClick={handleModalClose}>
             <div style={modalStyles} onClick={(e) => e.stopPropagation()}>
               {/* モーダルウィンドウの内容を記述 */}
               <span style={closeButtonStyles} onClick={handleModalClose}>×</span>
